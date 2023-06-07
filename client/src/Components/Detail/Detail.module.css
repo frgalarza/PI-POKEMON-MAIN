@@ -1,0 +1,50 @@
+.divPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#FFCC01, #EDB918, #AC821F);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    font-family: 'Nunito', sans-serif;
+}
+
+.character {
+    display: flex;
+    border: 3px solid #6B33B5;
+    background-color: rgba(245, 245, 220, 0.397);
+    height: 70%;
+    border-bottom-right-radius: 60px;
+}
+
+.infoMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.img{
+    max-height: 60%;
+    max-width: 60%
+}
+
+.title{
+    align-self: center;
+    border-bottom: 2px solid #6B33B5;
+}
+
+.infoType{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}

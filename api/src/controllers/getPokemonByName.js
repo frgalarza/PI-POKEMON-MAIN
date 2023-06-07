@@ -6,9 +6,11 @@ const getPokemonByName = async(name) => {
     let pokemonByName = await Pokemon.findOne({where: {name}})
 
     if(!pokemonByName){
-        try {
             const url = `https://pokeapi.co/api/v2/pokemon/${name}`
             const { data } = await axios(url)
+
+            if(!data) throw new Error('Not found')
+
             const { id, sprites, stats, height, weight, types } = data
     
             let pokemonByName = {
@@ -21,14 +23,9 @@ const getPokemonByName = async(name) => {
                 speed: stats[5].base_stat,
                 height,
                 weight,
-                type: types.map(element => element.type.name)
+                types: types.map(element => element.type.name)
             }
             return pokemonByName
-        }
-         catch (error) {
-            error.message = 'Not found'
-            return error.message
-        }
     }
     return pokemonByName
 }

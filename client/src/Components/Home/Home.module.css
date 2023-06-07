@@ -1,0 +1,72 @@
+.containerCards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+    justify-content: space-evenly;
+    align-content: space-around;
+    row-gap: 4%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.containerPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFCC01;
+    min-height: 89.7vh;
+}
+
+.containerPage br{
+    background-color: aqua;
+}
+
+.divBtnPage{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buttonPage{
+    padding: 6%;
+    color: #6B33B5;
+    box-shadow: 2px 2px 0 0 #6B33B5;
+    border:  2px solid #6B33B5;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+}
+
+.buttonPage:hover{
+    background-color: #da2e2e;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #000;
+    border:  2px solid #da2e2e;
+    cursor: pointer;
+}
+
+.buttonPageExact{
+    padding: 6%;
+    color: #6B33B5;
+    box-shadow: 2px 2px 0 0 #6B33B5;
+    border:  2px solid #6B33B5;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+}
+
+.buttonPageExact:hover{
+    background-color: #da2e2e;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #000;
+    border:  2px solid #da2e2e;
+    cursor: pointer;
+}
+
+.buttonPageExact:focus{
+    background-color: #da2e2e;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #000;
+    border:  2px solid #da2e2e;
+}

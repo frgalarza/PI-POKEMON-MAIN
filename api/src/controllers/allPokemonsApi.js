@@ -1,18 +1,21 @@
 const axios = require('axios')
 
 const allPokemonsApi = async() => {
-    let url = 'https://pokeapi.co/api/v2/pokemon?limit=50'
-    // Trae todos los personajes de la api, por temas de tiempo y recurso solo traigo 50
-    // while(url !== null){
-    //     await axios(url).then(res => res.data).then(response => {
-    //             response.results.forEach(character => pokemonsInfo.push(character))
-    //             url = response.next      
-    //         }
-    //     )
-    // }
     try {
-        const { data } = await axios(url)
-        //Recorro pokemonsInfo donde esta la url del pokemon
+    // Trae todos los personajes de la api, por temas de tiempo y recurso solo traigo 50
+        //let url = 'https://pokeapi.co/api/v2/pokemon'
+        // const data = []
+        // while(url !== null){
+            //     await axios(url).then(res => res.data).then(response => {
+                //                 response.results.forEach(character => data.push(character))
+                //                 url = response.next      
+                //             }
+                //         )
+                //     }
+                
+        let url = 'https://pokeapi.co/api/v2/pokemon?limit=60'
+         const { data } = await axios(url)
+        // const allPromises = data.map(async(character)=> {
         const allPromises = data.results.map(async(character)=> {
             return await axios(character.url)
         })

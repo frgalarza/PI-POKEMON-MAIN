@@ -1,0 +1,71 @@
+.divContainer {
+    display: flex;
+    width: 98%;
+    padding: 1%;
+    justify-content: space-evenly;
+    background-color: #FFCC01;
+    border-bottom: 2px solid #6B33B5;
+    text-align: center;
+}
+
+.divSearch{
+    position: relative;
+}
+
+.button{
+    padding: 0.3%;
+    color: #6B33B5;
+    box-shadow: 2px 2px 0 0 #6B33B5;
+    border:  2px solid #6B33B5;
+    font-family: 'Nunito', sans-serif;
+}
+
+.button:hover{
+    background-color: #da2e2e;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #000;
+    border:  2px solid #da2e2e;
+}
+
+.containerSelect{
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.select{
+    padding: 0.7%;
+    background-color: transparent;
+    color: #6B33B5;
+    box-shadow: 2px 2px 0 0 #6B33B5;
+    border:  2px solid #6B33B5;
+    font-family: 'Nunito', sans-serif;
+}
+
+.select:hover{
+    cursor: pointer;
+}
+
+.select::-webkit-scrollbar{
+    display: none;
+}
+
+.select:active{
+    background-color: #da2e2e;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #000;
+    border:  2px solid #da2e2e;
+    outline: none;
+}
+
+.select:focus{
+    background-color: #da2e2e;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #000;
+    border:  2px solid #da2e2e;
+    outline: none;
+}
+

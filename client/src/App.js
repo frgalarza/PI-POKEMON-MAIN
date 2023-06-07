@@ -7,12 +7,13 @@ import { useDispatch } from 'react-redux';
 import { addPokemon, addTypes } from './redux/action';
 import Detail from './Components/Detail/Detail';
 import Nav from './Components/Nav/Nav';
+import Form from './Components/Form/Form';
+import Error404 from './Components/Error 404/Error404';
 
 function App() {
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    console.log('hola')
     dispatch(addPokemon()) 
     dispatch(addTypes())
   }, [dispatch])
@@ -24,6 +25,8 @@ function App() {
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/home' element={<Home />}/>
         <Route path='/detail/:id' element={<Detail/>}/>
+        <Route path='/form' element={<Form/>} />
+        <Route path='*' element={<Error404/>} />
       </Routes>
     </BrowserRouter>
     

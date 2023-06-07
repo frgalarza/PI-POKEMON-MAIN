@@ -1,17 +1,12 @@
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
+import styles from './LandingPage.module.css'
 
 const LandingPage = () => {
 
-    useEffect(()=>{
-        console.log('Ya renderizo jeje')
-    }, [])
-
     return (
-        <div>
-            <h1>Welcome to Pokemon World</h1>
+        <div className={styles.divLanding}>
             <Link to='/home'>
-                <h2>Start Adventure</h2>
+                <h2 className={styles.button}>Start Adventure</h2>
             </Link>
         </div>
     )

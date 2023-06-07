@@ -1,0 +1,40 @@
+.divCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #6B33B5;
+    border: 2px solid #6B33B5;
+    box-shadow: 5px 5px 0 0 #6B33B5;
+    width: 90%;
+    height: fit-content;
+    font-family: 'Nunito', sans-serif;
+}
+
+.divCard:hover {
+    position: absolute;
+    animation: select 1s linear 0s infinite alternate;
+}
+
+.image {
+    width: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: white;
+    margin-top: 3%;
+}
+
+.divTypes{
+    display: flex;
+    gap: 4%;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+@keyframes select {
+    0% { width: fit-content; box-shadow:5px 5px 0 0 #6B33B5;}
+    100% { width: max-content; box-shadow: none;}
+}

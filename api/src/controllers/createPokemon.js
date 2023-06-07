@@ -1,7 +1,7 @@
  const { Pokemon, Type } = require('../db')
 
-const createPokemon = async(name, image, life, attack, defense, speed, height, weight, types) => {
-    if(!name || !image || !life || !attack || !defense || !speed || !height || !weight || !types) throw new Error('Missing data')
+const createPokemon = async(name, image, life, attack, defense, speed, height, weight, type) => {
+    if(!name || !image || !life || !attack || !defense || !speed || !height || !weight || !type) throw new Error('Missing data')
 
     const pokemonCreado = await Pokemon.create({
         name,
@@ -11,12 +11,12 @@ const createPokemon = async(name, image, life, attack, defense, speed, height, w
         defense, 
         speed, 
         height, 
-        weight, 
-        type:types}
+        weight,
+        }
         )
-    const poke = await Type.findAll({where : {name: types}})
+    const typesDb = await Type.findAll({where: {name: type}})
 
-    await pokemonCreado.addType(poke)
+    await pokemonCreado.addType(typesDb)
     return pokemonCreado
 }
 

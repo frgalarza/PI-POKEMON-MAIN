@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(2083),
       allowNull: false
     },
     life: {
@@ -41,13 +41,6 @@ module.exports = (sequelize) => {
     weight: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    type: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-      validate: {
-        len: [1,20]
-      }
     }
   }, { timestamps: false });
 };

@@ -1,0 +1,11 @@
+.inputSearch{
+    padding: 4%;
+    border: 2px solid #6B33B5;
+    background-color: transparent;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 30px;
+}
+
+.inputSearch:focus{
+    outline: none;
+}
