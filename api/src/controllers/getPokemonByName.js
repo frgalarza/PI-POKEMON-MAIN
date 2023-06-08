@@ -1,9 +1,9 @@
 const axios = require('axios')
-const { Pokemon } = require('../db')
+const { Pokemon, Type } = require('../db')
 
 const getPokemonByName = async(name) => {
     name = name.toLowerCase()
-    let pokemonByName = await Pokemon.findOne({where: {name}})
+    let pokemonByName = await Pokemon.findOne({where: {name}, include:{ model: Type, atributtes: ['name'], through: {attributes: []} }})
 
     if(!pokemonByName){
             const url = `https://pokeapi.co/api/v2/pokemon/${name}`

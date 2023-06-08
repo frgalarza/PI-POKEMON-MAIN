@@ -1,13 +1,15 @@
 const axios = require('axios')
-const { Pokemon } = require('../db')
+const { Pokemon, Type } = require('../db')
 
 const getPokemonById = async(id) => {
 
     if(id.length === 36) {
-        const characterById = await Pokemon.findOne({where: {id}})
-
+        const characterById = await Pokemon.findOne({where: {id}, include:{ model: Type, atributtes: ['name'], through: {attributes: []} }})
+ 
         if(!characterById) throw new Error('Pokemon not found')
-
+        
+        characterById.types = characterById.types.map(type => type.name)
+        
         return characterById
     }
 

@@ -11,8 +11,6 @@ const allPokemonsDb = async() => {
         }
     })
 
-    console.log(allCharacters);
-
     return allCharacters
 }
 

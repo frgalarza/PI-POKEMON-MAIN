@@ -15,6 +15,9 @@ getPokemonsRouter.get('/', async(req, res) => {
 
         let pokemonsApi = await allPokemonsApi()
         let pokemonsDb = await allPokemonsDb()
+    
+
+        console.log(pokemonsDb);
 
         const allPokemons = [...pokemonsApi, ...pokemonsDb]
 
